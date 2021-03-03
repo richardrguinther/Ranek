@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Ranek/static/css/main.2d45697e.chunk.css",
-    "main.js": "/Ranek/static/js/main.c66b6567.chunk.js",
-    "main.js.map": "/Ranek/static/js/main.c66b6567.chunk.js.map",
+    "main.js": "/Ranek/static/js/main.d588e660.chunk.js",
+    "main.js.map": "/Ranek/static/js/main.d588e660.chunk.js.map",
     "runtime-main.js": "/Ranek/static/js/runtime-main.42b46971.js",
     "runtime-main.js.map": "/Ranek/static/js/runtime-main.42b46971.js.map",
     "static/js/2.bd505c6c.chunk.js": "/Ranek/static/js/2.bd505c6c.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.42b46971.js",
     "static/js/2.bd505c6c.chunk.js",
     "static/css/main.2d45697e.chunk.css",
-    "static/js/main.c66b6567.chunk.js"
+    "static/js/main.d588e660.chunk.js"
   ]
 }
