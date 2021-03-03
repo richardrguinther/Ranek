@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Ranek/static/css/main.2d45697e.chunk.css",
+    "main.js": "/Ranek/static/js/main.3ebe28cf.chunk.js",
+    "main.js.map": "/Ranek/static/js/main.3ebe28cf.chunk.js.map",
+    "runtime-main.js": "/Ranek/static/js/runtime-main.42b46971.js",
+    "runtime-main.js.map": "/Ranek/static/js/runtime-main.42b46971.js.map",
+    "static/js/2.bd505c6c.chunk.js": "/Ranek/static/js/2.bd505c6c.chunk.js",
+    "static/js/2.bd505c6c.chunk.js.map": "/Ranek/static/js/2.bd505c6c.chunk.js.map",
+    "index.html": "/Ranek/index.html",
+    "static/css/main.2d45697e.chunk.css.map": "/Ranek/static/css/main.2d45697e.chunk.css.map",
+    "static/js/2.bd505c6c.chunk.js.LICENSE.txt": "/Ranek/static/js/2.bd505c6c.chunk.js.LICENSE.txt",
+    "static/media/contato.1bd9bf2d.jpg": "/Ranek/static/media/contato.1bd9bf2d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.42b46971.js",
+    "static/js/2.bd505c6c.chunk.js",
+    "static/css/main.2d45697e.chunk.css",
+    "static/js/main.3ebe28cf.chunk.js"
+  ]
+}
