@@ -2,6 +2,7 @@ import React from "react";
 
 import { PagesContext } from "../context/PagesContext";
 import { useParams } from "react-router-dom";
+import Slider from "../components/Slider";
 
 const Produto = () => {
   const { id: productID } = useParams();
@@ -24,10 +25,11 @@ const Produto = () => {
       <section>
         {loading && <p>Carregando...</p>}
         {!loading &&
-          product &&
-          product.fotos.map((foto, index) => (
-            <img key={foto + index} src={foto.src} alt={foto} />
-          ))}
+          product && (
+            <Slider photos={product.fotos} />
+            )
+          
+         }
       </section>
     </main>
   );
