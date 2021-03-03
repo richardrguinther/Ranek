@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// Components
+import Header from "./components/Header";
+import { PagesStorage } from "./context/PagesContext";
+
+// Pages
+import Home from "./pages/Home";
+import Produto from "./pages/Produto";
+// Styles
+import "./styles/GlobalStyles.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <PagesStorage>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/produtos" element={<Home />} />
+          <Route path="/produto?productID" element={<Produto />}></Route>
+          <Route path="/contato" />
+        </Routes>
+      </PagesStorage>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+// Utilize a API abaixo para puxar a lista de produto
+// https://ranekapi.origamid.dev/json/api/produto
+// Cada produto possui o id, o mesmo pode ser passado na api para retornar os dados desse produto específico
+// https://ranekapi.origamid.dev/json/api/produto/notebook
