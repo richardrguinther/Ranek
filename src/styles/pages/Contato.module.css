@@ -1,8 +1,13 @@
 main {
     margin: 1rem auto;
-    width : 80vw;
 
-    height: 60vw;
+    width : 80vw;
+    height: 80vh;
+    margin: 32px auto;
+
+    display: flex;
+
+    position: relative;
 }
 
 .container {
@@ -12,6 +17,10 @@ main {
     display              : grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows   : 1fr;
+
+    position : relative;
+    left     : 50%;
+    transform: translateX(-50%);
 }
 
 .container div {
@@ -20,6 +29,22 @@ main {
 }
 
 .contactImage {
-    width : 100%;
-    height: 100%;
+    max-width : 100%;
+    max-height: 100%;
+}
+
+.informacoesContato {
+    padding: 2rem;
+}
+
+.informacoesContato ul {
+    list-style: none;
+    line-height: 1.5;
+    padding: 0 0.3rem;
+    letter-spacing: 0.05rem;
+}
+
+.informacoesContato ul li::before {
+    content    : "-";
+    text-indent: -5px;
 }

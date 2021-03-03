@@ -1,0 +1,17 @@
+.pageProdutoContainer {
+    max-height: 60vh;
+    max-width : 80vw;
+}
+
+.pageProdutoDisplay {
+    max-height: 100%;
+    max-width : 100%;
+
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pageProdutoInfo {
+    margin : 0 2rem;
+    padding: 2rem;
+}

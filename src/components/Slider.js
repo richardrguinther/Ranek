@@ -6,7 +6,7 @@ const Slider = ({ photos }) => {
   const [currentImage, setCurrentImage] = React.useState(0);
 
   const generatePhotoIndexes = () => {
-    return photos.map((photo, index) => (
+    return photos.map((_, index) => (
       <span
         key={`photo-index-${index}`}
         onClick={() => setCurrentImage(index)}

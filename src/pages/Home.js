@@ -4,6 +4,7 @@ import ProductsThumbs from "../components/ProductsThumbs";
 
 import styles from "../styles/pages/Home.module.css";
 import { PagesContext } from "../context/PagesContext";
+import Loading from "../components/Loading";
 
 const Home = () => {
   const [products, setProducts] = React.useState([]);
@@ -26,7 +27,7 @@ const Home = () => {
 
   return (
     <main className={styles.container}>
-      {loading && <p>Carregando...</p>}
+      {loading && <Loading />}
       {!loading &&
         products &&
         products.map((product) => {

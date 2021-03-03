@@ -18,7 +18,14 @@ const Contato = () => {
             alt="Imagem de contato"
           />
         </div>
-        <div className={styles.informacoesContato}></div>
+        <div className={styles.informacoesContato}>
+          <h3>Entre em contato</h3>
+          <ul>
+            <li>suporte@ranek.com</li>
+            <li>9999-9999</li>
+            <li>Rua Ali Perto, 999</li>
+          </ul>
+        </div>
       </section>
     </main>
   );
