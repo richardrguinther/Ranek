@@ -6,28 +6,8 @@ export const PagesContext = React.createContext();
 export const PagesStorage = ({ children }) => {
   const location = useLocation();
 
-  const [products, setProducts] = React.useState([]);
   const [error, setError] = React.useState(null);
-
-  const getProducts = (url) => {
-    const fetchedProduct = fetch(url).then((products) => products.json());
-
-    return fetchedProduct;
-  };
-
-  // ----------------------------
-
- 
-
-  // ------------------------------
-
-  // Fetch the products on start
-  React.useEffect(() => {
-    const url = "https://ranekapi.origamid.dev/json/api/produto";
-
-    getProducts(url).then((result) => setProducts(result));
-  }, []);
-  // ----------------------------
+  const [loading, setLoading] = React.useState(false);
 
   // Animate pages
   React.useEffect(() => {
@@ -46,7 +26,7 @@ export const PagesStorage = ({ children }) => {
   // --------------
 
   return (
-    <PagesContext.Provider value={{ location, products, error }}>
+    <PagesContext.Provider value={{ location, error, loading, setLoading }}>
       {children}
     </PagesContext.Provider>
   );

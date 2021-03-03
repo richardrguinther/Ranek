@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Components
 import Header from "./components/Header";
 import { PagesStorage } from "./context/PagesContext";
+import Contato from "./pages/Contato";
 
 // Pages
 import Home from "./pages/Home";
@@ -18,8 +19,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/produtos" element={<Home />} />
-          <Route path="/produto?productID" element={<Produto />}></Route>
-          <Route path="/contato" />
+          <Route path="/produto/:id" element={<Produto />}></Route>
+          <Route path="/contato" element={<Contato />} />
         </Routes>
       </PagesStorage>
     </BrowserRouter>

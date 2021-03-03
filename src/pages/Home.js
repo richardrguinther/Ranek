@@ -6,11 +6,29 @@ import styles from "../styles/pages/Home.module.css";
 import { PagesContext } from "../context/PagesContext";
 
 const Home = () => {
-  const { products } = React.useContext(PagesContext);
+  const [products, setProducts] = React.useState([]);
+
+  const getProducts = (url) => {
+    const fetchedProduct = fetch(url).then((products) => products.json());
+
+    return fetchedProduct;
+  };
+
+  // Fetch the products on start
+  React.useEffect(() => {
+    const url = "https://ranekapi.origamid.dev/json/api/produto";
+
+    getProducts(url).then((result) => setProducts(result));
+  }, []);
+  // ----------------------------
+
+  const { loading } = React.useContext(PagesContext);
 
   return (
     <main className={styles.container}>
-      {products &&
+      {loading && <p>Carregando...</p>}
+      {!loading &&
+        products &&
         products.map((product) => {
           return (
             <ProductsThumbs

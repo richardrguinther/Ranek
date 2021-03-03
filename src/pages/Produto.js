@@ -1,28 +1,34 @@
 import React from "react";
 
-import Products from "../components/Products";
 import { PagesContext } from "../context/PagesContext";
+import { useParams } from "react-router-dom";
 
 const Produto = () => {
-  const { products, location } = React.useContext(PagesContext);
-
-  let selectedProduct;
+  const { id: productID } = useParams();
+  
+  const { loading, setLoading } = React.useContext(PagesContext);
+  const [product, setProduct] = React.useState(null);
 
   React.useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const produtoPesquisado = params.get("productID");
-
-    selectedProduct = products.filter(
-      (product) => product.id === produtoPesquisado
-    );
-    console.log(selectedProduct);
-  }, []);
+    setLoading(true);
+    fetch(`https://ranekapi.origamid.dev/json/api/produto/${productID}`)
+      .then((response) => response.json())
+      .then((json) => {
+        setProduct(json);
+        setLoading(false);
+      });
+  }, [productID, setLoading]);
 
   return (
     <main>
-      {products.map((product) => (
-        <li>{product.nome}</li>
-      ))}
+      <section>
+        {loading && <p>Carregando...</p>}
+        {!loading &&
+          product &&
+          product.fotos.map((foto, index) => (
+            <img key={foto + index} src={foto.src} alt={foto} />
+          ))}
+      </section>
     </main>
   );
 };

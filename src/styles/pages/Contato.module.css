@@ -1,0 +1,25 @@
+main {
+    margin: 1rem auto;
+    width : 80vw;
+
+    height: 60vw;
+}
+
+.container {
+    height: minmax(0, 1fr);
+    width : minmax(0, 1fr);
+
+    display              : grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows   : 1fr;
+}
+
+.container div {
+    height: 100%;
+    width : 100%;
+}
+
+.contactImage {
+    width : 100%;
+    height: 100%;
+}

@@ -4,7 +4,7 @@ import styles from "../styles/components/ProductsThumbs.module.css";
 
 const ProductsThumbs = ({ photo, name, id }) => {
   return (
-    <Link to={`/produto?productID=${id}`}>
+    <Link to={`/produto/${id}`}>
       <div className={styles.container}>
         {photo && <img src={photo.src} alt={name} />}
         <h3>{name}</h3>
