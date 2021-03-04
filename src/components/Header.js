@@ -7,15 +7,15 @@ const Header = () => {
     <>
       <header className={styles.container}>
         <h1 className={styles.logo}>
-          <NavLink to="/" end>
+          <NavLink to="/Ranek/" end>
             Ranek
           </NavLink>
         </h1>
         <nav className={styles.navbar}>
-          <NavLink activeClassName={styles.active} to="/produtos">
+          <NavLink activeClassName={styles.active} to="/Ranek/produtos">
             Produtos
           </NavLink>
-          <NavLink activeClassName={styles.active} to="/contato">
+          <NavLink activeClassName={styles.active} to="/Ranek/contato">
             Contato
           </NavLink>
         </nav>

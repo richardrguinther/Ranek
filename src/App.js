@@ -17,10 +17,10 @@ function App() {
       <PagesStorage>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/produtos" element={<Home />} />
-          <Route path="/produto/:id" element={<Produto />}></Route>
-          <Route path="/contato" element={<Contato />} />
+          <Route path="/Ranek/" element={<Home />} />
+          <Route path="/Ranek/produtos" element={<Home />} />
+          <Route path="/Ranek/produto/:id" element={<Produto />}></Route>
+          <Route path="/Ranek/contato" element={<Contato />} />
         </Routes>
       </PagesStorage>
     </BrowserRouter>

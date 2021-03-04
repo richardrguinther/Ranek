@@ -7,6 +7,7 @@ import { PagesContext } from "../context/PagesContext";
 import Loading from "../components/Loading";
 
 const Home = () => {
+  const { loading } = React.useContext(PagesContext);
   const [products, setProducts] = React.useState([]);
 
   const getProducts = (url) => {
@@ -23,7 +24,6 @@ const Home = () => {
   }, []);
   // ----------------------------
 
-  const { loading } = React.useContext(PagesContext);
 
   return (
     <main className={styles.container}>
